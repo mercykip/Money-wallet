@@ -1,31 +1,33 @@
-
-
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;<span > Welcome</span>
-    <div class="spacer"></div>
+<!-- <div class="toolbar" role="banner">
+    &nbsp;&nbsp;&nbsp;&nbsp;<span > Welcome</span>
+    <div class="spacer"></div> -->
     <!-- <div  class="container-fluid">-->  
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">  
+        <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">  
           <br/>    
-             
-          <ul class="navbar-nav" style="float: right" >  
+                       <ul class="navbar-nav" style="float: right" >  
               <li class="nav-item ">  
                 <a routerLink="viewt" class="nav-link" class="btn btn-primary active" role="button" >View Transaction</a> &nbsp;&nbsp;
               </li>   
               <li class="nav-item">  
                 <a  routerLink="view" class="nav-link" class="btn btn-primary active" role="button" >View Customers</a>  
               </li>        
-           
-            </ul>  
+                       </ul>  
           </nav>     
-           
-      
 </div>
+<router-outlet></router-outlet> -->
 
 
-
-
-
-
-<router-outlet></router-outlet>
+<br/>
+<div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+        <span  class="example-fill-remaining-space ">Money Wallet</span>
+        <a mat-button routerLink="view" >TransactionList</a> &nbsp;&nbsp;&nbsp;
+        <a mat-button routerLink="view" >CustomerList</a>&nbsp;&nbsp;&nbsp;
+        <a mat-button routerLink="view" >AddCustomer</a>
+     
+  </mat-toolbar-row>
+  </mat-toolbar>
+  </div>
+  <router-outlet></router-outlet> 

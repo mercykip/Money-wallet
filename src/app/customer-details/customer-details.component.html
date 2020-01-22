@@ -1,14 +1,58 @@
 <p>customer-details works!</p>
-<div *ngIf="customer">
-    <div>
-        <label>Name: </label> {{customer.customer_name}}
-    </div>
-    <div>
-        <label>username: </label> {{customer.username}}
-    </div>
+<div class="container border border-info" width="300px">
+    <div *ngIf="customers"   border="1px" class="align_center">
+      <h1>Customer Details</h1>
+        <div>
+          <label><b>customer_id: </b></label> {{customers.customer_id}}
+        </div>
+        <div>
+          <label><b>customer_name: </b></label> {{customers.customer_name}}
+        </div>
+        <div>
+          <label><b>username: </b></label> {{customers.username}}
+        </div>  
+        <div>
+            <label><b>address: </b></label> {{customers.address}}
+          </div>
+          <div>
+            <label><b>Phone_number: </b></label> {{customers.Phone_number}}
+          </div>
+          <div>
+            <label><b>Email Id: </b></label> {{customers.email}}
+          </div> 
+      </div>
+      
+      <br>
+      <br>
+      <button  (click)="customerList()" class="btn btn-primary float-right">Back to Customer List</button><br>
+    <table mat-table class="table table-striped" border="1px">
+      <thead>
+          <tr>
+            <th>customer_id</th>
+            <th>customer_name</th>
+            <th>username</th>
+            <th>address</th>
+            <th>Phone_number</th>
+            <th> email</th>
+      
+          </tr>
+      </thead>
+      <tbody>
+        <tr mdbTableCol *ngIf="customers">
+          <td>{{ customers.customer_id }}</td>
+          <td>{{ customers.customer_name }}</td>
+          <td>{{ customers.username }}</td>
+          <td>{{ customers.address }}</td>
+          <td>{{ customers.Phone_number }}</td>
+          <td>{{ customers. email }}</td>
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
  
 
   
 
-    <hr/>
-</div>
+   

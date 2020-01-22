@@ -1,0 +1,31 @@
+<p>customer-edit works!</p>
+
+<div [hidden]="submitted" style="width: 600px;" class="align_center" >
+    <h3>Update Employee</h3>
+  <form (ngSubmit)="onSubmit()" >
+    <div class="form-group">
+      <label for="name">customer_name</label>
+      <input type="text" class="form-control" id="customer_name" required [(ngModel)]="customer.customer_name" name="customer_name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">account_number</label>
+      <input type="text" class="form-control" id="account_number" required [(ngModel)]="customer.account_number" name="account_number">
+    </div>
+
+    <div class="form-group">
+      <label for="name">email</label>
+      <input type="email" class="form-control" id="email" required [(ngModel)]="customer.email" name="email">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  <br>
+  <br>
+  <button  (click)="gotoList()" class="btn btn-primary float-right">Back to Customer List</button><br>
+</div>
+
+
+
+
+
