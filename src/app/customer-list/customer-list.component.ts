@@ -13,18 +13,18 @@ import { NgModule } from '@angular/core';
 export class CustomerListComponent implements OnInit {
   customer=new Customer;
   username:String;//search
- // customerss : Customer[]=[];
   customers: Array<any>;//search
- // customers:Observable<Customer[]>;
+  customerlist:any;
+ // customerss:Customer[];
   displayedColumns: string[] = ['customer_id', 'customer_name', 'account_number', 'email','username','action','actionu','actiond'];
   constructor(private customerservice:CustomerService,private router: Router,
     private https:HttpClientModule) { }
-
   ngOnInit() {
     this.customerservice.getCustomerList().subscribe(data =>{  
-      this.customers =data;  
+      this.customers =data; 
       console.log(data);
-      }) 
+      },
+      error=>console.log(error));  
     //this.customerList();
   }
 // customerList(){

@@ -1,11 +1,20 @@
 export class Customer {
     customer_id:number;
-    customer_name:String;
+    customerName:String;
     address:String;
-    Phone_number:number;
+    PhoneNumber:number;
     username:String;
-    national_id:number;
-    account_number:number;
+    nationalId:number;
+    accountNumber:String;
     email:String;
-    password:number
+    pin:number;
+}
+class Transaction {
+    transaction_id:number;
+    username:String;
+    date:String;
+    accountBalance:number;
+    amount:number;
+    charges:number;
+    trasactionType:String;
 }

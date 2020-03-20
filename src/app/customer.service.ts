@@ -7,14 +7,19 @@ import { HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class CustomerService {
-  public CUSTOMER_API = 'http://localhost:8063/view'; 
-  public CUSTOMER_EDIT_API='http://localhost:8063/customerUpdate';
-  public CUSTOMER_DELETE_API='http://localhost:8063/customerDelete';
+  public CUSTOMER_API = 'http://localhost:8061/view'; 
+  public TRANSACTION_API = 'http://localhost:8061/viewTransaction'; 
+  public CUSTOMER_EDIT_API='http://localhost:8061/customerUpdate';
+  public CUSTOMER_DELETE_API='http://localhost:8061/customerDelete';
   constructor(private http:HttpClient) { }
   
       getCustomerList(): Observable<any> {  
         return this.http.get(this.CUSTOMER_API);  
       } 
+      getTransactionList(): Observable<any> {  
+        return this.http.get(this.TRANSACTION_API);  
+      } 
+
 
     //getCustomer(cutomer_id: number): Observable<any> {  
       getCustomer(customer_id: number): Observable<any> {  

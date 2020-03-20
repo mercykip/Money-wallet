@@ -13,12 +13,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CustomerDetailsComponent implements OnInit {
   customers:Customer;
+  //customers:Array<any>;
   customer_id:number;
   constructor(private service:CustomerService,private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit() {
-    this.customers=new Customer();
+   // this.customers=new Customer();
    // this.router.navigate(['view',this.customer_id]);
+   this.customers=new Customer();
    this.customer_id = this.route.snapshot.params['customer_id'];
     this.service.getCustomer(this.customer_id).subscribe(data =>{  
     this.customers =data;  

@@ -34,13 +34,13 @@
        <ng-container matColumnDef="customer_name" >
            <mat-header-cell *matHeaderCellDef >Name</mat-header-cell>
           
-           <mat-cell *matCellDef="let customer">{{customer.customer_name}}</mat-cell>
+           <mat-cell *matCellDef="let customer">{{customer.customerName}}</mat-cell>
        </ng-container>
    
        <ng-container matColumnDef="account_number">
            <mat-header-cell *matHeaderCellDef>Account_Number</mat-header-cell>
           
-           <mat-cell *matCellDef="let customer">{{customer.account_number}}</mat-cell>
+           <mat-cell *matCellDef="let customer">{{customer.accountNumber}}</mat-cell>
        </ng-container>
    
        <ng-container matColumnDef="email">
@@ -64,19 +64,19 @@
        <ng-container matColumnDef="national_id">
            <mat-header-cell *matHeaderCellDef>National Id</mat-header-cell>
           
-           <mat-cell *matCellDef="let customer">{{customer.national_id}}</mat-cell>
+           <mat-cell *matCellDef="let customer">{{customer.nationalId}}</mat-cell>
        </ng-container>
          
        <ng-container matColumnDef="confirm_password">
            <mat-header-cell *matHeaderCellDef>Confirm Password</mat-header-cell>
           
-           <mat-cell *matCellDef="let customer ">{{customer.confirm_password}}</mat-cell>
+           <mat-cell *matCellDef="let customer ">{{customer.confirmPin}}</mat-cell>
        </ng-container>
    
        <ng-container matColumnDef="password">
            <mat-header-cell *matHeaderCellDef>password</mat-header-cell>
           
-           <mat-cell *matCellDef="let customer">{{{customer.password</mat-cell>
+           <mat-cell *matCellDef="let customer">{{{customer.pin</mat-cell>
        </ng-container>
        <ng-container matColumnDef="action">
            <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>   
@@ -111,3 +111,19 @@
    </mat-table>
   </div>
    <router-outlet></router-outlet>  
+
+<!-- 
+   <table class="table">
+    <tr>
+        <th>#</th>
+        <th>Game</th>
+        <th>Platform</th>
+        <th>Release</th>
+    </tr>
+    <tr *ngFor="let game of games; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{game.game}}</td>
+        <td>{{game.platform}}</td>
+        <td>{{game.release}}</td>
+    </tr>
+</table> -->

@@ -15,13 +15,15 @@ import {
   MatTableDataSource,MatMenuModule,MatButtonModule,MatCheckboxModule, MatToolbarModule, MatCardModule,MatFormFieldModule,MatRadioModule,MatListModule,MatIconModule, MatProgressSpinnerModule,MatSortModule,MatPaginatorModule
 } from '@angular/material';
 import { CustomerFilterPipe } from './customer-filter.pipe';
+import { TransactionListComponent } from './transaction-list/transaction-list.component';
 @NgModule({
   declarations: [
     AppComponent,
     CustomerListComponent,
     CustomerDetailsComponent,
     CustomerEditComponent,
-    CustomerFilterPipe
+    CustomerFilterPipe,
+    TransactionListComponent
    
   ],
   imports: [
@@ -31,6 +33,7 @@ import { CustomerFilterPipe } from './customer-filter.pipe';
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
+   
    // HttpClient,
     FormsModule,
     //HttpClient,
