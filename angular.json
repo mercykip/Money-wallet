@@ -26,7 +26,8 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
-               "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+     
               
             ],
             "scripts": [
@@ -129,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "money-wallet"
+  "defaultProject": "money-wallet",
+  "cli": {
+    "analytics": "4df677d3-053a-4b56-a4b9-aedc731b9133"
+  }
 }

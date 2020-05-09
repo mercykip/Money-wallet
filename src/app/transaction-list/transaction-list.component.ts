@@ -13,8 +13,9 @@ import { NgModule } from '@angular/core';
 })
 export class TransactionListComponent implements OnInit {
   customer=new Customer ;
+  username:String;//search  
   customers: Array<any>;//search
-  displayedColumns: string[] = ['transaction_id','Username','AccountBalance','Date','AmountSent','Charges','TransactionType'];
+  displayedColumns: string[] = ['transactionId','customerId','Username','AccountBalance','Date','AmountSent','Charges','TransactionType'];
   constructor(private customerservice:CustomerService,private router: Router,
     private https:HttpClientModule) { }
     
@@ -25,5 +26,19 @@ export class TransactionListComponent implements OnInit {
       },
       error=>console.log(error));  
   }
-
+  search(){
+    this.customers=this.customers.filter(res=>{
+      if(!this.customers || !this.username){
+        this.customerservice.getCustomerList().subscribe(data =>{  
+          this.customers =data;  
+          console.log(data);
+          }) 
+    }
+    else{
+      error => console.log(error) ;
+    }
+      return res.username.toLocaleLowerCase().match(this.username.toLocaleLowerCase());
+    })
+  }
+  
 }

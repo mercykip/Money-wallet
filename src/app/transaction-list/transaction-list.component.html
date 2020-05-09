@@ -1,5 +1,10 @@
 
+ <!-- Search form -->
+<br/>
+<form class="float-right " width="600px ">
+  <input type="text" [(ngModel)]="username"  class="form-control float-right " name="username" placeholder="UserName" (input)="search()" >  
  
+</form>
    <div>
      <mat-toolbar >
         <span >Transaction List</span>
@@ -12,11 +17,17 @@
                <mat-header-cell *matHeaderCellDef mat-sort-header>Transaction List</mat-header-cell>
            </ng-container>
        
-       <ng-container matColumnDef="transaction_id">
-           <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+       <ng-container matColumnDef="transactionId">
+           <mat-header-cell *matHeaderCellDef>TransactionID</mat-header-cell>
           
-           <mat-cell *matCellDef="let customer ">{{customer.transaction_id}}</mat-cell>
+           <mat-cell *matCellDef="let customer ">{{customer.transactionId}}</mat-cell>
        </ng-container>
+          
+       <ng-container matColumnDef="customerId">
+        <mat-header-cell *matHeaderCellDef>CustomerID</mat-header-cell>
+       
+        <mat-cell *matCellDef="let customer ">{{customer.customerId}}</mat-cell>
+    </ng-container>
    
        <ng-container matColumnDef="Username">
            <mat-header-cell *matHeaderCellDef>UserName</mat-header-cell>

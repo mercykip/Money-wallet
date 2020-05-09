@@ -1,5 +1,5 @@
 export class Customer {
-    customer_id:number;
+    customerId:number;
     customerName:String;
     address:String;
     PhoneNumber:number;
@@ -10,7 +10,8 @@ export class Customer {
     pin:number;
 }
 class Transaction {
-    transaction_id:number;
+    transactionId:number;
+    customerId:number;
     username:String;
     date:String;
     accountBalance:number;

@@ -16,6 +16,7 @@ import {
 } from '@angular/material';
 import { CustomerFilterPipe } from './customer-filter.pipe';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
     CustomerDetailsComponent,
     CustomerEditComponent,
     CustomerFilterPipe,
-    TransactionListComponent
+    TransactionListComponent,
+    LoginComponent
    
   ],
   imports: [
@@ -38,10 +40,7 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
     FormsModule,
     //HttpClient,
     ReactiveFormsModule,
-
-
     AppRoutingModule,
-  
     MatToolbarModule,
     MatPaginatorModule,
     MatSortModule,

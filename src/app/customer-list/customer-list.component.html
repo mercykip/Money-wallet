@@ -25,10 +25,10 @@
                <mat-header-cell *matHeaderCellDef mat-sort-header>Customer List</mat-header-cell>
            </ng-container>
        
-       <ng-container matColumnDef="customer_id">
+       <ng-container matColumnDef="customerId">
            <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
           
-           <mat-cell *matCellDef="let customer ">{{customer.customer_id}}</mat-cell>
+           <mat-cell *matCellDef="let customer ">{{customer.customerId}}</mat-cell>
        </ng-container>
    
        <ng-container matColumnDef="customer_name" >
@@ -81,20 +81,20 @@
        <ng-container matColumnDef="action">
            <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>   
            <mat-cell *matCellDef="let customer"> 
-             <button mat-raised-button class="btn btn-info" (click)="customerDetails(customer.customer_id)">Details</button> 
+             <button mat-raised-button class="btn btn-info" (click)="customerDetails(customer.customerId)">Details</button> 
            </mat-cell>
          </ng-container>
          
          <ng-container matColumnDef="actionu">
            <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>   
            <mat-cell *matCellDef="let customer"> 
-             <button mat-raised-button class="btn btn-info " (click)="customerEdit(customer.customer_id)">Update</button> 
+             <button mat-raised-button class="btn btn-info " (click)="customerEdit(customer.customerId)">Update</button> 
            </mat-cell>
          </ng-container>
          <ng-container matColumnDef="actiond">
             <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>   
             <mat-cell *matCellDef="let customer"> 
-              <button mat-raised-button class="btn btn-danger" (click)="customerDelete(customer.customer_id)">Delete</button> 
+              <button mat-raised-button class="btn btn-danger" (click)="customerDelete(customer.customerId)">Delete</button> 
             </mat-cell>
           </ng-container>
          <!-- <ng-container matRowDef="actionu">

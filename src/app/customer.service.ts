@@ -19,8 +19,6 @@ export class CustomerService {
       getTransactionList(): Observable<any> {  
         return this.http.get(this.TRANSACTION_API);  
       } 
-
-
     //getCustomer(cutomer_id: number): Observable<any> {  
       getCustomer(customer_id: number): Observable<any> {  
         return this.http.get(`${this.CUSTOMER_API}/${customer_id}`);   

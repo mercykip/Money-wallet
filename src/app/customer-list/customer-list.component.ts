@@ -15,8 +15,7 @@ export class CustomerListComponent implements OnInit {
   username:String;//search
   customers: Array<any>;//search
   customerlist:any;
- // customerss:Customer[];
-  displayedColumns: string[] = ['customer_id', 'customer_name', 'account_number', 'email','username','action','actionu','actiond'];
+  displayedColumns: string[] = ['customerId', 'customer_name', 'account_number', 'email','username','action','actionu','actiond'];
   constructor(private customerservice:CustomerService,private router: Router,
     private https:HttpClientModule) { }
   ngOnInit() {
@@ -25,38 +24,22 @@ export class CustomerListComponent implements OnInit {
       console.log(data);
       },
       error=>console.log(error));  
-    //this.customerList();
+ 
   }
-// customerList(){
-//   this.customers=this.customerservice.getCustomerList();
-//    this.customerservice.getCustomerList().subscribe(data =>{  
-//      this.customers =data;  
-//      console.log(data);
-//      },
-//     error=>console.log(error));  
-// }
-customerDetails(customer_id){
-  this.router.navigate(['view',customer_id]);
-//   this.customerservice.getCustomer(customer_id).subscribe(data =>{  
-//   this.customers =data;  
-//  console.log(data);
 
-// })
-console.log(customer_id);
+customerDetails(customerId){
+  this.router.navigate(['view',customerId]);
+console.log(customerId);
 
   }
- customerEdit(customer_id){
-    this.router.navigate(['customerUpdate',customer_id]);
-  //   this.customerservice.getCustomer(customer_id).subscribe(data =>{  
-  //   this.customers =data;  
-  //  console.log(data);
-  
-  // })
-  console.log(customer_id);
+ customerEdit(customerId){
+    this.router.navigate(['customerUpdate',customerId]);
+
+  console.log(customerId);
   
     }
-    customerDelete(customer_id){
-      this.customerservice.deleteCustomer(customer_id).
+    customerDelete(customerId){
+      this.customerservice.deleteCustomer(customerId).
       subscribe(data=>{
         console.log(data);
         this.ngOnInit();
